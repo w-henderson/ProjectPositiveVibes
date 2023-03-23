@@ -1,3 +1,8 @@
+type Report = {
+  context: ReportContext;
+  messages: ChatMessage[];
+}
+
 type ChatMessage = {
   id: string;
   content: string;

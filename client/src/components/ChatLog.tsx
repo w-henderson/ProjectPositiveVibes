@@ -5,6 +5,7 @@ import Message from "./Message";
 
 type Props = {
   messages: ChatMessage[];
+  muted: string[];
 }
 
 type State = {
@@ -23,22 +24,28 @@ class ChatLog extends Component<Props, State> {
   }
 
   componentDidMount() {
-    let reportedElement = document.querySelector("div.Message.flagged")!;
-    reportedElement.scrollIntoView({
-      behavior: "auto",
-      block: "center",
-      inline: "center"
-    });
+    let reportedElement = document.querySelector("div.Message.flagged");
+
+    if (reportedElement) {
+      reportedElement.scrollIntoView({
+        behavior: "auto",
+        block: "center",
+        inline: "center"
+      });
+    }
 
     setTimeout(() => {
       document.querySelector("div.ChatLog")!.addEventListener("scroll", () => this.setState({ scrolled: true }));
-    }, 100);
+    }, 1000);
   }
 
   returnToNormal() {
     this.setState({ scrolled: false });
 
     let reportedElement = document.querySelector("div.Message.flagged")!;
+
+    if (!reportedElement) return;
+
     reportedElement.scrollIntoView({
       behavior: "smooth",
       block: "center",
@@ -53,9 +60,11 @@ class ChatLog extends Component<Props, State> {
           className="ChatLog"
           onMouseEnter={() => this.setState({ hovered: true })}
           onMouseLeave={() => this.setState({ hovered: false })}>
-          {this.props.messages.map(message => (
-            <Message key={message.id} message={message} />
-          ))}
+          {this.props.messages
+            .filter(message => !this.props.muted.includes(message.author))
+            .map(message => (
+              <Message key={message.id} message={message} />
+            ))}
         </div>
 
         <div className={`overlay${this.state.hovered || this.state.scrolled ? " disabled" : ""}`} />

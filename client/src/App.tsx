@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 import "./App.scss";
-import ActionDialog from "./components/ActionDialog";
 
+import ActionDialog from "./components/ActionDialog";
 import ChatLog from "./components/ChatLog";
 import Context from "./components/Context";
+import FilterControl from "./components/FilterControl";
+import Summary from "./components/Summary";
 
 import data from "./data.json";
 
+const newnham = require("./images/newnham.png");
+
 type State = {
-  actioning: boolean
+  report: Report,
+  actioning: boolean,
+  muted: string[]
 }
 
 class App extends Component<{}, State> {
@@ -16,7 +22,9 @@ class App extends Component<{}, State> {
     super(props);
 
     this.state = {
-      actioning: false
+      report: data[0],
+      actioning: false,
+      muted: []
     }
   }
 
@@ -28,22 +36,64 @@ class App extends Component<{}, State> {
     })
   }
 
+  getInvolvedParties(): string[] {
+    let involvedParties: string[] = [];
+
+    for (let message of this.state.report.messages) {
+      if (!involvedParties.includes(message.author)) {
+        involvedParties.push(message.author);
+      }
+    }
+
+    return involvedParties;
+  }
+
+  mute(person: string) {
+    this.setState({
+      muted: [...this.state.muted, person]
+    })
+  }
+
+  unmute(person: string) {
+    this.setState({
+      muted: this.state.muted.filter(p => p !== person)
+    })
+  }
+
+  nextReport() {
+    this.setState({
+      actioning: false,
+      muted: []
+    })
+  }
+
   render() {
+    const involvedParties = this.getInvolvedParties();
+
     return (
       <div className="App">
-        <Context context={data[0].context} />
+        <Context context={this.state.report.context} />
 
-        <ChatLog messages={data[0].messages} />
-        <div></div>
-        <div></div>
+        <ChatLog
+          messages={this.state.report.messages}
+          muted={this.state.muted} />
+
+        <FilterControl
+          people={involvedParties}
+          onMute={this.mute.bind(this)}
+          onUnmute={this.unmute.bind(this)} />
+
+        <Summary />
 
         <div className="Footer">
           press <strong>a</strong> to action or <strong>d</strong> to dismiss
+
+          <img src={newnham} alt="Newnham College" />
         </div>
 
         <ActionDialog
           visible={this.state.actioning}
-          onAction={() => this.setState({ actioning: false })} />
+          onAction={this.nextReport.bind(this)} />
       </div>
     )
   }

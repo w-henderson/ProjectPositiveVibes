@@ -30,5 +30,12 @@ div.App {
       border: 1px solid var(--medium);
       border-radius: 2px;
     }
+
+    img {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      height: 32px;
+    }
   }
 }
