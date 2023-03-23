@@ -3,7 +3,7 @@ import "../styles/Context.scss";
 
 import HumanizeDate from "@videsk/humanize-date";
 
-const coc = require("../images/coc_shield.png");
+const cr = require("../images/cr_shield.png");
 
 type Props = {
   context: ReportContext;
@@ -21,7 +21,7 @@ class Context extends Component<Props> {
 
         <div className="metrics">
           <div>
-            <span><img src={coc} alt="Clash of Clans shield" /></span>
+            <span><img src={cr} alt="Clash Royale shield" /></span>
             <span>game</span>
           </div>
 

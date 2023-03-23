@@ -3,7 +3,7 @@
     "id": "13435187",
     "user": "Ladreka",
     "reports": 2,
-    "game": "Clash of Clans",
+    "game": "Clash Royale",
     "alliance": "hog ridaaa",
     "allianceDescription": "hog ridaaa",
     "created": 1620511600000,
@@ -22,13 +22,23 @@
       ]
     ],
     "summary": [
-      "ADHD",
-      "Strategies",
-      "Transgender comments"
+      "Medical",
+      "Strategy",
+      "LGBTQ"
     ],
     "reporter": "Michael",
     "reporterReputation": 50,
-    "reporteeReputation": 89
+    "reporteeReputation": 89,
+    "insight": {
+      "similar": "87315615",
+      "result": "criminal",
+      "message": {
+        "id": "4712",
+        "content": "420 blaze it",
+        "author": "Fletcher",
+        "timestamp": 1647697457200
+      }
+    }
   },
   "messages": [
     {

@@ -1,6 +1,6 @@
 div.App {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: calc(65% - 32px) calc(35% - 32px) 64px;
   width: 100%;
   height: 100%;
@@ -13,7 +13,7 @@ div.App {
     display: flex;
     place-items: center;
     place-content: center;
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
     border: none;
     border-top: 1px solid var(--dark);
     color: rgba(255, 255, 255, 0.5);

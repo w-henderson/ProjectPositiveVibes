@@ -57,7 +57,7 @@ for file in files:
       "id": "12345678",
       "user": flaggedMessage["author"],
       "reports": 2,
-      "game": "Clash of Clans",
+      "game": "Clash Royale",
       "alliance": "TODO",
       "allianceDescription": "TODO",
       "created": 1580511600000,

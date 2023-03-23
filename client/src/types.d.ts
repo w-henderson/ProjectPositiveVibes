@@ -16,6 +16,12 @@ type Flag = {
   severity: number;
 }
 
+type InsightData = {
+  similar: string;
+  result: string;
+  message: ChatMessage;
+}
+
 type ReportContext = {
   id: string;
   user: string;
@@ -33,4 +39,5 @@ type ReportContext = {
   reporter: string;
   reporterReputation: number;
   reporteeReputation: number;
+  insight: Insight;
 }

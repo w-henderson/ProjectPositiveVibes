@@ -5,6 +5,7 @@ import ActionDialog from "./components/ActionDialog";
 import ChatLog from "./components/ChatLog";
 import Context from "./components/Context";
 import FilterControl from "./components/FilterControl";
+import Insight from "./components/Insight";
 import Summary from "./components/Summary";
 
 import report2 from "./data/report_2_processed.json";
@@ -98,6 +99,8 @@ class App extends Component<{}, State> {
           onUnmuteAll={() => this.setState({ muted: [] })} />
 
         <Summary summary={this.state.reports[this.state.reportIndex].context.summary} />
+
+        <Insight insight={this.state.reports[this.state.reportIndex].context.insight} />
 
         <div className="Footer">
           press <strong>a</strong> to action or <strong>d</strong> to dismiss

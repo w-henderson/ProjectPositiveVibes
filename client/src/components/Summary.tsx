@@ -10,7 +10,6 @@ class Summary extends Component<Props> {
     return (
       <div className="Summary">
         <h2>Themes</h2>
-        <h3>Powered by GPT-3</h3>
 
         <ul>
           {this.props.summary.map((item, index) => (

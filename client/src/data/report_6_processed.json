@@ -3,9 +3,9 @@
     "id": "91346143",
     "user": "Lynsie",
     "reports": 4,
-    "game": "Clash of Clans",
+    "game": "Clash Royale",
     "alliance": "th12 nerds",
-    "allianceDescription": "th12 or higher only, no n00bs allowed 😎 5x global clash champions, combined 500k subscribers on youtube",
+    "allianceDescription": "no n00bs allowed 😎 5x global clash champions, combined 500k subscribers on youtube",
     "created": 1584515600000,
     "lastSeen": 1672114400000,
     "device": "iPhone 13 Pro Max",
@@ -18,13 +18,23 @@
       ]
     ],
     "summary": [
-      "Clash Royale deck strategies and card strengths",
-      "Ladder rankings and gameplay tactics",
-      "General commentary on the game"
+      "Strategy",
+      "Gameplay",
+      "Competition"
     ],
     "reporter": "Jimmylee",
     "reporterReputation": 43,
-    "reporteeReputation": 56
+    "reporteeReputation": 56,
+    "insight": {
+      "similar": "41553331",
+      "result": "harassment",
+      "message": {
+        "id": "4712",
+        "content": "go commit die",
+        "author": "Frankie",
+        "timestamp": 1657697339500
+      }
+    }
   },
   "messages": [
     {

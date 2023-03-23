@@ -3,7 +3,7 @@
     "id": "36123476",
     "user": "Jaris",
     "reports": 2,
-    "game": "Clash of Clans",
+    "game": "Clash Royale",
     "alliance": "terk and co",
     "allianceDescription": "terk's clan is the best clan in the world",
     "created": 1660511600000,
@@ -19,13 +19,23 @@
       ]
     ],
     "summary": [
-      "Strategies",
+      "Strategy",
       "Relationships",
-      "Mental health and burnout"
+      "Mental health"
     ],
     "reporter": "Sharalyn",
     "reporterReputation": 85,
-    "reporteeReputation": 71
+    "reporteeReputation": 71,
+    "insight": {
+      "similar": "14251231",
+      "result": "aggravation",
+      "message": {
+        "id": "4712",
+        "content": "stfu",
+        "author": "Elliot",
+        "timestamp": 1657697435000
+      }
+    }
   },
   "messages": [
     {
