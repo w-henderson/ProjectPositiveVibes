@@ -1,6 +1,19 @@
 div.FilterControl {
   padding: 32px;
 
+  div.buttons {
+    width: 100%;
+    text-decoration: underline;
+    margin-bottom: 16px;
+    text-align: center;
+    opacity: 0.5;
+    cursor: pointer;
+
+    span {
+      margin: 0 8px;
+    }
+  }
+
   img {
     width: 64px;
     height: 64px;

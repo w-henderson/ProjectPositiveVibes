@@ -90,8 +90,11 @@ class App extends Component<{}, State> {
 
         <FilterControl
           people={involvedParties}
+          muted={this.state.muted}
           onMute={this.mute.bind(this)}
-          onUnmute={this.unmute.bind(this)} />
+          onUnmute={this.unmute.bind(this)}
+          onMuteAll={() => this.setState({ muted: this.getInvolvedParties() })}
+          onUnmuteAll={() => this.setState({ muted: [] })} />
 
         <Summary />
 
