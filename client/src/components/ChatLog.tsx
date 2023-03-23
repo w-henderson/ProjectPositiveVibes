@@ -14,6 +14,8 @@ type State = {
 }
 
 class ChatLog extends Component<Props, State> {
+  oldMessages: ChatMessage[] = [];
+
   constructor(props: Props) {
     super(props);
 
@@ -51,6 +53,29 @@ class ChatLog extends Component<Props, State> {
       block: "center",
       inline: "center"
     });
+  }
+
+  componentDidUpdate() {
+    if (this.props.messages !== this.oldMessages) {
+      this.oldMessages = this.props.messages;
+
+      let reportedElement = document.querySelector("div.Message.flagged");
+
+      if (reportedElement) {
+        reportedElement.scrollIntoView({
+          behavior: "auto",
+          block: "center",
+          inline: "center"
+        });
+      }
+
+      setTimeout(() => {
+        this.setState({
+          scrolled: false,
+          hovered: false
+        })
+      }, 100);
+    }
   }
 
   render() {

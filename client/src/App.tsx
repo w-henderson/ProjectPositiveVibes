@@ -7,12 +7,15 @@ import Context from "./components/Context";
 import FilterControl from "./components/FilterControl";
 import Summary from "./components/Summary";
 
-import data from "./data.json";
+import report2 from "./data/report_2_processed.json";
+import report3 from "./data/report_3_processed.json";
+import report6 from "./data/report_6_processed.json";
 
 const newnham = require("./images/newnham.png");
 
 type State = {
-  report: Report,
+  reports: Report[],
+  reportIndex: number,
   actioning: boolean,
   muted: string[]
 }
@@ -21,8 +24,11 @@ class App extends Component<{}, State> {
   constructor(props: {}) {
     super(props);
 
+    const reports = [report2, report3, report6];
+
     this.state = {
-      report: data[0],
+      reports,
+      reportIndex: 0,
       actioning: false,
       muted: []
     }
@@ -32,14 +38,14 @@ class App extends Component<{}, State> {
     document.addEventListener("keydown", e => {
       if (e.key === "a") this.setState({ actioning: true });
       else if (e.key === "Escape") this.setState({ actioning: false });
-      else if (e.key === "d") this.setState({ actioning: false });
+      else if (e.key === "d") this.nextReport();
     })
   }
 
   getInvolvedParties(): string[] {
     let involvedParties: string[] = [];
 
-    for (let message of this.state.report.messages) {
+    for (let message of this.state.reports[this.state.reportIndex].messages) {
       if (!involvedParties.includes(message.author)) {
         involvedParties.push(message.author);
       }
@@ -61,7 +67,11 @@ class App extends Component<{}, State> {
   }
 
   nextReport() {
+    let nextIndex = this.state.reportIndex + 1;
+    if (nextIndex === this.state.reports.length) nextIndex = 0;
+
     this.setState({
+      reportIndex: nextIndex,
       actioning: false,
       muted: []
     })
@@ -72,10 +82,10 @@ class App extends Component<{}, State> {
 
     return (
       <div className="App">
-        <Context context={this.state.report.context} />
+        <Context context={this.state.reports[this.state.reportIndex].context} />
 
         <ChatLog
-          messages={this.state.report.messages}
+          messages={this.state.reports[this.state.reportIndex].messages}
           muted={this.state.muted} />
 
         <FilterControl
