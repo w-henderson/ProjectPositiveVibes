@@ -1,0 +1,53 @@
+[
+  {
+    "messages": [
+      {
+        "id": "1",
+        "content": "innocent message",
+        "author": "hogridaaa",
+        "timestamp": 1679563053441
+      },
+      {
+        "id": "2",
+        "content": "another innocent message",
+        "author": "hogridaaa",
+        "timestamp": 1679563053441
+      },
+      {
+        "id": "3",
+        "content": "racial slur",
+        "author": "xxdonaldtrumpxx",
+        "timestamp": 1679563053441,
+        "flag": {
+          "category": "hate speech",
+          "severity": 6
+        }
+      },
+      {
+        "id": "4",
+        "content": "hey not cool buddy",
+        "author": "hogridaaa",
+        "timestamp": 1679563053441
+      },
+      {
+        "id": "5",
+        "content": "please give me troops for clan war i need more troops thank you very much",
+        "author": "xxdonaldtrumpxx",
+        "timestamp": 1679563053441
+      }
+    ],
+    "context": {
+      "id": "12345678",
+      "user": "xxdonaldtrumpxx",
+      "reports": 2,
+      "game": "Clash of Clans",
+      "alliance": "trump tower clan",
+      "allianceDescription": "make clash great again 🛡️\njoin us if you want to win clan wars against joe biden (we hate him)",
+      "created": 1580511600000,
+      "lastSeen": 1682114400000,
+      "device": "iPhone 13 Pro Max",
+      "ip": "123.123.123.123",
+      "averageGameTime": 23
+    }
+  }
+]
