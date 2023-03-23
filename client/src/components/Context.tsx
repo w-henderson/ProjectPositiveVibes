@@ -72,6 +72,23 @@ class Context extends Component<Props> {
             <div>{this.props.context.allianceDescription}</div>
           </div>
         </div>
+
+        <div className="general">
+          <div>
+            <span>Reporter:</span>
+            <span>{this.props.context.reporter}</span>
+          </div>
+
+          <div>
+            <span>Reporter reputation:</span>
+            <span>{this.props.context.reporterReputation}%</span>
+          </div>
+
+          <div>
+            <span>Reportee reputation:</span>
+            <span>{this.props.context.reporteeReputation}%</span>
+          </div>
+        </div>
       </div>
     )
   }
