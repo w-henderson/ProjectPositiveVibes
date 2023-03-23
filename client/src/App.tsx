@@ -97,7 +97,7 @@ class App extends Component<{}, State> {
           onMuteAll={() => this.setState({ muted: this.getInvolvedParties() })}
           onUnmuteAll={() => this.setState({ muted: [] })} />
 
-        <Summary />
+        <Summary summary={this.state.reports[this.state.reportIndex].context.summary} />
 
         <div className="Footer">
           press <strong>a</strong> to action or <strong>d</strong> to dismiss
