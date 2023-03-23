@@ -6,6 +6,7 @@ const supercell = require("../images/supercell-logo-white-transp.png");
 type Props = {
   people: string[];
   muted: string[];
+  threads: string[][];
   onMute: (person: string) => void;
   onUnmute: (person: string) => void;
   onMuteAll: () => void;
@@ -46,6 +47,14 @@ class FilterControl extends Component<Props> {
             <span>{person}</span>
           </div>)}
         </div>
+
+        <h3 style={{ marginTop: 16 }}>Identified Threads</h3>
+
+        <ul>
+          {this.props.threads.map(thread => <li>
+            {thread.join(", ")}
+          </li>)}
+        </ul>
       </div>
     )
   }

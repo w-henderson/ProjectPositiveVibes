@@ -10,7 +10,13 @@
     "lastSeen": 1672114400000,
     "device": "iPhone 13 Pro Max",
     "ip": "151.123.51.200",
-    "averageGameTime": 66
+    "averageGameTime": 66,
+    "threads": [
+      [
+        "Lynsie",
+        "Lorien"
+      ]
+    ]
   },
   "messages": [
     {

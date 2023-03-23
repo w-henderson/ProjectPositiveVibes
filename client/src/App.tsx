@@ -91,6 +91,7 @@ class App extends Component<{}, State> {
         <FilterControl
           people={involvedParties}
           muted={this.state.muted}
+          threads={this.state.reports[this.state.reportIndex].context.threads}
           onMute={this.mute.bind(this)}
           onUnmute={this.unmute.bind(this)}
           onMuteAll={() => this.setState({ muted: this.getInvolvedParties() })}

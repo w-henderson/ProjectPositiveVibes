@@ -28,4 +28,5 @@ type ReportContext = {
   device: string;
   ip: string;
   averageGameTime: number;
+  threads: string[][];
 }

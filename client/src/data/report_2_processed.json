@@ -10,7 +10,14 @@
     "lastSeen": 1682114400000,
     "device": "iPhone SE (2020)",
     "ip": "217.192.102.25",
-    "averageGameTime": 16
+    "averageGameTime": 16,
+    "threads": [
+      [
+        "Jaris",
+        "Tracy",
+        "Lubna"
+      ]
+    ]
   },
   "messages": [
     {
