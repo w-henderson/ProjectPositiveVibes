@@ -1,0 +1,62 @@
+div.Message {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  max-width: 100%;
+  margin-top: 16px;
+
+  div.content {
+    display: inline-block;
+    background-color: var(--dark);
+    border-radius: 16px 16px 16px 0;
+    overflow: hidden;
+
+    div.meta {
+      font-size: 12px;
+      margin-bottom: 4px;
+      padding: 12px 12px 0;
+      font-weight: 200;
+      opacity: 0.75;
+
+      span:last-child {
+        float: right;
+        opacity: 0.5;
+        margin-left: 16px;
+      }
+    }
+
+    div.text {
+      padding: 0 12px 12px;
+      user-select: text;
+      word-break: break-word;
+    }
+  }
+
+  div.flag {
+    flex: 1;
+    text-align: right;
+    padding: 4px 0;
+    margin-left: 16px;
+    border-top: 1px solid var(--dark);
+    border-bottom: 1px solid var(--dark);
+
+    >div {
+      span:first-child {
+        font-size: 0.8em;
+        color: rgba(255, 255, 255, 0.5);
+        margin-right: 4px;
+      }
+
+      span:last-child {
+        font-family: "Supercell Headline";
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+
+  &.flagged {
+    div.content {
+      background-color: var(--accent-blue);
+    }
+  }
+}
