@@ -1,3 +1,58 @@
 div.Context {
   padding: 16px 32px;
+
+  div.metrics {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    font-family: "Supercell Headline";
+
+    div {
+      flex: 1;
+      text-align: center;
+      background-color: var(--accent-blue);
+      border-radius: 8px;
+      padding: 8px 4px;
+
+      span {
+        display: block;
+      }
+
+      img {
+        width: 36px;
+        height: 36px;
+      }
+
+      span:first-child {
+        font-size: 2em;
+      }
+
+      span:last-child {
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  div.general {
+    margin-top: 24px;
+
+    >div {
+      span:first-child {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      span:last-child {
+        font-family: "Supercell Headline";
+        margin-left: 4px;
+      }
+
+      div {
+        border: 1px solid var(--dark);
+        border-radius: 2px;
+        overflow-y: auto;
+        height: 128px;
+        padding: 8px;
+      }
+    }
+  }
 }

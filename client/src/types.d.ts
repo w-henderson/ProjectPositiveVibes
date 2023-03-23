@@ -12,6 +12,8 @@ type Flag = {
 }
 
 type ReportContext = {
+  id: string;
+  user: string;
   reports: number;
   game: string;
   alliance: string;
@@ -19,5 +21,6 @@ type ReportContext = {
   created: number;
   lastSeen: number;
   device: string;
+  ip: string;
   averageGameTime: number;
 }
