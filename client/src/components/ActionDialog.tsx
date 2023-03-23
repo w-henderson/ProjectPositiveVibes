@@ -76,7 +76,7 @@ class ActionDialog extends Component<Props, State> {
 
   componentDidMount() {
     document.addEventListener("keydown", e => {
-      if (this.state.highlighted !== undefined) return;
+      if (this.state.highlighted !== undefined || !this.props.visible) return;
 
       let key = e.key.toUpperCase();
 
@@ -88,6 +88,8 @@ class ActionDialog extends Component<Props, State> {
     });
 
     document.addEventListener("keyup", e => {
+      if (!this.props.visible) return;
+
       this.setState({
         highlighted: undefined
       })
