@@ -35,6 +35,7 @@ class App extends Component<{}, State> {
 
         <ChatLog messages={data[0].messages} />
         <div></div>
+        <div></div>
 
         <div className="Footer">
           press <strong>a</strong> to action or <strong>d</strong> to dismiss
