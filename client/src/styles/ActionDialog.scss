@@ -25,39 +25,54 @@ div.ActionDialog {
     pointer-events: none;
   }
 
-  div {
+  h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  >div {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     place-items: center;
+    place-content: center;
+    gap: 8px;
+    max-width: 900px;
 
-    width: 600px;
-    background-color: var(--background);
-    border: 1px solid var(--dark);
-    border-radius: 8px;
-    padding: 8px;
-
-    cursor: pointer;
-
-    span:first-child {
-      display: inline-flex;
+    >div {
+      display: flex;
       place-items: center;
-      place-content: center;
-      width: 32px;
-      height: 32px;
-      font-family: "Supercell Headline";
-      color: var(--text);
-      background-color: var(--dark);
-      border: 1px solid var(--medium);
-      border-radius: 2px;
-    }
 
-    span:last-child {
-      flex: 1;
-      text-align: center;
-    }
+      width: 400px;
+      background-color: var(--background);
+      border: 1px solid var(--dark);
+      border-radius: 8px;
+      padding: 8px;
 
-    &:hover,
-    &.highlighted {
-      background-color: var(--dark);
+      cursor: pointer;
+
+      span:first-child {
+        display: inline-flex;
+        place-items: center;
+        place-content: center;
+        width: 32px;
+        height: 32px;
+        font-family: "Supercell Headline";
+        color: var(--text);
+        background-color: var(--dark);
+        border: 1px solid var(--medium);
+        border-radius: 2px;
+      }
+
+      span:last-child {
+        flex: 1;
+        text-align: center;
+      }
+
+      &:hover,
+      &.highlighted {
+        background-color: var(--dark);
+      }
     }
   }
 }
