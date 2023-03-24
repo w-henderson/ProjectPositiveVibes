@@ -29,6 +29,12 @@ div.App {
       background-color: var(--dark);
       border: 1px solid var(--medium);
       border-radius: 2px;
+      cursor: pointer;
+      transition: background-color 200ms;
+
+      &:hover {
+        background-color: var(--medium);
+      }
     }
 
     img {

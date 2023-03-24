@@ -103,7 +103,7 @@ class App extends Component<{}, State> {
         <Insight insight={this.state.reports[this.state.reportIndex].context.insight} />
 
         <div className="Footer">
-          press <strong>a</strong> to action or <strong>d</strong> to dismiss
+          press <strong onClick={() => this.setState({ actioning: true })}>a</strong> to action or <strong onClick={() => this.nextReport()}>d</strong> to dismiss
 
           <img src={newnham} alt="Newnham College" />
         </div>
