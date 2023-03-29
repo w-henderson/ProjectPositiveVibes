@@ -11,6 +11,8 @@
 
 ![Screenshot](screenshots/dashboard.png)
 
+*(Built during [START Hack 2023](https://www.startglobal.org/start-hack) by [Dron Hazra](https://github.com/dronhazra), [William Henderson](https://github.com/w-henderson) and [Sam Yun Yap](https://github.com/00samyun))*
+
 Project Positive Vibes introduces a new approach to content moderation: harnessing the power of modern large language models (LLMs) while staying true to the core philosophy that the human moderator is the decision-maker.
 
 On average, Supercell’s moderators take 12 seconds to make a judgement about a report after being presented with a huge assortment of noisy signals. Our idea is simple: by minimising the noise, we can maximise the productivity of the moderation teams while improving their accuracy and access to information, which is necessary for less clear-cut cases.
@@ -24,5 +26,3 @@ Currently, once a report is dealt with, the work the moderator put into it no lo
 Of course, it is of the utmost importance to both Supercell and ourselves that at the end of the day, the human is the one making the decision about the future of a player within the game. While large language models can show moderators very useful information, both quantitative and qualitative, to help them understand the full context of the report, we have been careful to ensure that these insights remain only insights, and that the interface provides an easy way for the moderator to dig into the data themselves in cases where the models can’t grasp the full picture.
 
 In conclusion, Project Positive Vibes uses insights provided by LLMs, displayed in a sleek and intuitive user interface, to allow content moderators to make better decisions, faster.
-
-(Built during [START Hack 2023](https://www.startglobal.org/start-hack))
